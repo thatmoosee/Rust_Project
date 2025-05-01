@@ -1,3 +1,4 @@
+//By Max Quirk and Josh Schmidt
 use std::fmt;
 
 use crate::pet_types::PetType;
