@@ -44,4 +44,9 @@ impl PetStore {
         }
     }
 
-    // Finds a pet by name, returning a reference to its
+ // Finds a pet by name, returning a reference to its boxed trait object if found
+ pub fn find_pet(&self, name: &str) -> Option<&Box<dyn Pet>> {
+    // Search the pets vector for a pet whose get_info contains the given name
+    self.pets.iter().find(|pet| pet.get_info().contains(name))
+}
+}
